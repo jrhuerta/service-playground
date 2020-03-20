@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "alaya-clients-service"
+version = "0.1.0"
+description = ""
+authors = ["Joaquin Rodriguez <jrhuerta@alayacare.com>"]
+packages = [
+    { include = "alaya", from = "src" }
+]
+include = ["migrations/*", "migrations/versions/*"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+alembic = "^1.4.1"
+sqlalchemy = "^1.3.15"
+mysqlclient = "^1.4.6"
+eralchemy = "^1.2.10"
+psycopg2 = "^2.8.4"
+fastapi = "^0.52.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+ipython = "^7.13.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
